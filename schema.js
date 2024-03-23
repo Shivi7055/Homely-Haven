@@ -7,7 +7,13 @@ module.exports.listingSchema = Joi.object({
         location : Joi.string().required(),
         country : Joi.string().required(),
         price : Joi.number().required().min(0),
-        image : Joi.string().allow("", null)
+        image : Joi.object({
+            filename : Joi.string().default("filename"),
+            url : Joi.string().default("https://cdn.pixabay.com/photo/2014/07/10/17/17/hotel-389256_1280.jpg").allow("").allow(null)
+        }).default({
+            filename : "filename",
+            url : null,
+        })
     }).required()
 });
 

@@ -15,8 +15,8 @@ const listingSchema = new Schema({
         },
         url : {
             type : String,
-            default : "https://unsplash.com/photos/a-path-through-a-dense-forest-on-a-foggy-day-cJc10ctjwnw",
-            set : (v) => v === "" ? "https://unsplash.com/photos/a-path-through-a-dense-forest-on-a-foggy-day-cJc10ctjwnw" : v
+            default : "https://cdn.pixabay.com/photo/2014/07/10/17/17/hotel-389256_1280.jpg",
+            set : (v) => v === "" ? "https://cdn.pixabay.com/photo/2014/07/10/17/17/hotel-389256_1280.jpg" : v
         }
     }, 
     price : Number,
