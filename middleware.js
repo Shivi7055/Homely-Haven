@@ -1,4 +1,5 @@
 const Listing = require("./models/listing.js");
+const Review = require("./models/reviews.js");
 const ExpressError = require("./utils/ExpressError.js");
 const {listingSchema} = require("./schema.js"); 
 const {reviewSchema} = require("./schema.js");
@@ -41,6 +42,7 @@ const validateListing = (req, res, next) =>{
 };
 
 const validateReview = (req, res, next) =>{
+    console.log(req.body);
     let {error} = reviewSchema.validate(req.body);
     if(error){
         let errMsg = error.details.map((el) => el.message).join(",");
