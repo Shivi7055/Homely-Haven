@@ -34,6 +34,10 @@ const listingSchema = new Schema({
             required : true
         }
     }
+    // category : {
+    //     type : String,
+    //     enum : []
+    // }
 })
 
 listingSchema.post("findOneAndDelete", async(listing)=>{
